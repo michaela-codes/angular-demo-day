@@ -1,0 +1,31 @@
+<div *ngIf="child">
+
+    <h2>{{child.name | uppercase}} Details</h2>
+    <div><span>Name: </span>{{child.name}}</div>
+    <div>
+        <h2>{{child.name | uppercase}} Details</h2>
+<div class="details">
+<div>
+    <label for="name">Name: </label>
+    <input id="name" [(ngModel)]="child.name">
+</div>
+<div>
+    <label for="age">Age: </label> 
+    <input id="age" [(ngModel)]="child.age">
+</div>
+<div>
+    <label for="allergies">Allergies: </label>
+    <input id="allergies" [(ngModel)]="child.allergies">
+</div>
+<div>
+    <label for="bedtime">Bedtime: </label> 
+    <input id="bedtime" [(ngModel)]="child.bedtime">
+</div>
+<div>
+    <label for="food">Favorite Food: </label>
+    <input id="food" [(ngModel)]="child.favFood">
+</div>
+</div>
+    </div>
+    <button type="button" (click)="goBack()">Go Back</button>
+</div>
