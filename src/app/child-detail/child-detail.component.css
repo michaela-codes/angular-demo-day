@@ -1,0 +1,30 @@
+h2 {
+    text-align: center;
+}
+
+
+
+.details {
+    text-align: center;
+    padding: 10px;
+}
+
+input {
+    padding: 3px;
+    margin: 10px;
+}
+
+button {
+    display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+}

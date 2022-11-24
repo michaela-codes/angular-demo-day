@@ -1,10 +1,9 @@
 <h2>My Children</h2>
 <ul class="children">
+<ng-container>
     <li *ngFor="let child of children">
-            <a routerLink="/detail/{{child.name}}">
-            <span class="badge">{{child.name}}</span> {{child.name}}
-            </a>
-    </li>
-</ul>
+            <a routerLink="/detail/{{child.name}}" routerLinkActive="active-link">
+                <button>{{child.name}}</button>
+
 
 

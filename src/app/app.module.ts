@@ -17,7 +17,7 @@ import { ChildDetailComponent } from './child-detail/child-detail.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   
   providers: [],

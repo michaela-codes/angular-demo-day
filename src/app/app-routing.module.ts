@@ -4,9 +4,9 @@ import { ChildrenComponent } from './children/children.component';
 import { ChildDetailComponent } from './child-detail/child-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/children', pathMatch: 'full' },
-  { path: '/children', component: ChildrenComponent },
-  { path: '/detail/:name', component: ChildDetailComponent },
+  { path: '', redirectTo: 'children', pathMatch: 'full' },
+  { path: 'children', component: ChildrenComponent },
+  { path: 'detail/:name', component: ChildDetailComponent },
 ];
 
 
