@@ -6,6 +6,8 @@ import { ChildrenComponent } from './children/children.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ChildDetailComponent } from './child-detail/child-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { ChildDetailComponent } from './child-detail/child-detail.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   
   providers: [],

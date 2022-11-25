@@ -28,6 +28,13 @@ export class ChildDetailComponent {
     this.location.back();
   }
 
+  //save(): void {
+  //  if (this.child) {
+   //   this.childrenService.updateChild(this.child)
+    //    .subscribe(() => this.goBack())
+    //}
+  //}
+
   ngOnInit(): void {
     this.getChild()
   }
