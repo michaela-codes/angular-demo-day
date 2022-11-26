@@ -3,5 +3,6 @@ export interface Child {
     age: number;
     allergies: string;
     bedtime: string;
-    favFood: string
+    favFood: string;
+    id: string
 }

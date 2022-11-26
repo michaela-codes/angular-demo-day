@@ -1,6 +1,6 @@
 <div *ngIf="child">
 
-    <h2>{{child.name | uppercase}} Details</h2>
+    <h2>{{child.name}} Details</h2>
 <div class="details">
 <div>
     <label for="name">Name: </label>
@@ -22,6 +22,8 @@
     <label for="food">Favorite Food: </label>
     <input id="food" [(ngModel)]="child.favFood">
 </div>
+    <label for="id">ID: </label>
+    <input id="id" [(ngModel)]="child.id">
 </div>
     </div>
     <button type="button" (click)="goBack()">Go Back</button>

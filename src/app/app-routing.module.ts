@@ -6,7 +6,7 @@ import { ChildDetailComponent } from './child-detail/child-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: 'children', pathMatch: 'full' },
   { path: 'children', component: ChildrenComponent },
-  { path: 'detail/:name', component: ChildDetailComponent },
+  { path: 'detail/:id', component: ChildDetailComponent },
 ];
 
 

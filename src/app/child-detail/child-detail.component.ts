@@ -19,8 +19,8 @@ export class ChildDetailComponent {
   ) {}
 
   getChild(): void {
-    const name = String(this.route.snapshot.paramMap.get('name'));
-    this.childrenService.getChild(name)
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    this.childrenService.getChild(id)
       .subscribe(child => this.child = child);
   }
 

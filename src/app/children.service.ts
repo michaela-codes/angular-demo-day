@@ -15,8 +15,8 @@ export class ChildrenService {
     
   }
 
-  getChild(name: string): Observable<Child> {
-    return this.http.get<Child>(`${this.childrenUrl}/${name}`);
+  getChild(id: string): Observable<Child> {
+    return this.http.get<Child>(`${this.childrenUrl}/${id}}`);
     
   }
 
