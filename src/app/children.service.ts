@@ -24,9 +24,9 @@ export class ChildrenService {
   deleteChild(id: string): Observable<unknown> {
     return this.http.delete(`${this.childrenUrl}/${id}`, this.httpOptions)
   }
-  //updateChild(name: string): Observable<any> {
-
-  //}
+  updateChild(child: Child): Observable<any> {
+    return this.http.put(`${this.childrenUrl}/${child.id}`, child);
+  }
 
   constructor(private http: HttpClient) {}
 

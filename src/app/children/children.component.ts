@@ -39,7 +39,6 @@ export class ChildrenComponent implements OnInit {
 
   ngOnInit(): void {
     this.getChildren();
-    this.addChild(<Child>{});
     this.deleteChild();
   }
 }

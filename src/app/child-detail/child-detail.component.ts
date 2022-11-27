@@ -30,12 +30,11 @@ export class ChildDetailComponent implements OnInit {
   }
 
 
-  //save(): void {
-  //  if (this.child) {
-   //   this.childrenService.updateChild(this.child)
-    //    .subscribe(() => this.goBack())
-    //}
-  //}
+  save(): void {
+    if (this.child) {
+      this.childrenService.updateChild(this.child)
+       .subscribe(() => this.goBack())
+  }}
 
   ngOnInit(): void {
     this.getChild()

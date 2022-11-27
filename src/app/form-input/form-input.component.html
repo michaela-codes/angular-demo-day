@@ -3,24 +3,24 @@
 
 <div>
     <label id="name">Name: </label>
-    <input id="name" type="text">
+    <input id="name" type="text" #childName>
 </div>
 <div>
     <label id="age">Age: </label>
-    <input id="age" type="number">
+    <input id="age" type="number" #childAge>
 </div>
 <div>
     <label id="allergies">Allergies: </label>
-    <input id="allergies" type="string">
+    <input id="allergies" type="string" #childAllergies>
 </div>
 <div>
     <label id="bedtime">Bedtime: </label>
-    <input id="bedtime" type="time">
+    <input id="bedtime" type="time" #childBedtime>
 </div>
 <div>
     <label id="favFood">Favorite Food: </label>
-    <input id="favFood" type="string">
+    <input id="favFood" type="string" #childFavFood>
 </div>
 
-<button type="button" (click)="addChild()">Add Child</button>
+<button type="button" class="add-button "(click)="add(childName.value, childAge.value, childAllergies.value, childBedtime.value, childFavFood.value); childName.value=''; childAge.value=''; childAllergies.value=''; childBedtime.value=''; childFavFood.value=''">Add Child</button>
 <button type="button" (click)="goBack()">Go Back</button>
