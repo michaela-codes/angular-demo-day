@@ -9,8 +9,9 @@ import { ChildrenService } from '../children.service';
   templateUrl: './child-detail.component.html',
   styleUrls: ['./child-detail.component.css']
 })
-export class ChildDetailComponent {
-  child: Child | undefined;
+export class ChildDetailComponent implements OnInit {
+  @Input() child?: Child;
+  //child: Child | undefined;
 
   constructor (
     private route: ActivatedRoute,
@@ -27,6 +28,7 @@ export class ChildDetailComponent {
   goBack(): void {
     this.location.back();
   }
+
 
   //save(): void {
   //  if (this.child) {

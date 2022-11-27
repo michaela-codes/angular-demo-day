@@ -1,9 +1,15 @@
+<div class="newChild">
+<a routerLink="/new-child" routerLinkActive="active-link">
+    <button>New Child</button>
+</a>
+</div>
 <h2>My Children</h2>
 <ul class="children">
 <ng-container>
     <li *ngFor="let child of children">
             <a routerLink="/detail/{{child.id}}" routerLinkActive="active-link">
                 <button>{{child.name}}</button>
+
 
 
 

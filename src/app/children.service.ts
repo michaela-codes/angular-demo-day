@@ -1,30 +1,37 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Child } from './child';
 import { CHILDREN } from './mock-children';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ChildrenService {
-
   getChildren(): Observable<Child[]> {
     return this.http.get<Child[]>(this.childrenUrl);
-
-    
   }
 
   getChild(id: string): Observable<Child> {
-    return this.http.get<Child>(`${this.childrenUrl}/${id}}`);
-    
+    return this.http.get<Child>(`${this.childrenUrl}/${id}`);
   }
 
+  addChild(newChild: Child): Observable<any> {
+    return this.http.post(`${this.childrenUrl}/children`, newChild, this.httpOptions)
+  }
+
+
+  deleteChild(id: string): Observable<unknown> {
+    return this.http.delete(`${this.childrenUrl}/${id}`, this.httpOptions)
+  }
   //updateChild(name: string): Observable<any> {
 
   //}
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   private childrenUrl = '/api/v1/demoday';
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
 }
