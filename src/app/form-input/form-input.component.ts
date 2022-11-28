@@ -12,7 +12,8 @@ import { ChildrenComponent } from '../children/children.component';
   styleUrls: ['./form-input.component.css'],
 })
 export class FormInputComponent implements OnInit {
-  child: Child = new Child[]
+  children: Child[] = [];
+  child: Child = new Child();
   name = new FormControl('');
 
   constructor(
@@ -26,7 +27,7 @@ export class FormInputComponent implements OnInit {
     this.childrenService
       .addChild(child)
       .subscribe((child: Child) => {
-        this.child.push(child);
+        this.children.push(child);
       });
   }}
 
