@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location, Time } from '@angular/common';
 import { ChildrenService } from '../children.service';
 import { FormControl } from '@angular/forms';
+import { ChildrenComponent } from '../children/children.component';
 
 @Component({
   selector: 'app-form-input',
@@ -11,7 +12,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./form-input.component.css'],
 })
 export class FormInputComponent implements OnInit {
-  @Input() child?: Child;
+  child: Child = new Child[]
   name = new FormControl('');
 
   constructor(
@@ -20,19 +21,12 @@ export class FormInputComponent implements OnInit {
     private location: Location
   ) {}
 
-  add(childName: string, childAge: number, childAllergies: string, childBedtime: Time, childFavFood: string): void {
+  add(child: Child): void {
     if (this.child) {
     this.childrenService
-      .addChild({
-        name: childName,
-        age: childAge,
-        allergies: childAllergies,
-        bedtime: childBedtime,
-        favFood: childFavFood
-
-      } as Child)
+      .addChild(child)
       .subscribe((child: Child) => {
-        this.children.push(child);
+        this.child.push(child);
       });
   }}
 
