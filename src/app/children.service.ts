@@ -1,6 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Child } from './child';
-import { CHILDREN } from './mock-children';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 

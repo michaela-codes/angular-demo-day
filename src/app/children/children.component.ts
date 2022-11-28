@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Child } from '../child'
-import { CHILDREN } from '../mock-children';
 import { ChildrenService } from '../children.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';

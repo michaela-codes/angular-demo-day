@@ -5,5 +5,6 @@ export interface Child {
     age: number;
     allergies?: string;
     bedtime: Time;
-    favFood?: string
+    favFood?: string;
+    id: string
 }
