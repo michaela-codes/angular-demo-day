@@ -12,8 +12,9 @@ import { ChildrenComponent } from '../children/children.component';
   styleUrls: ['./form-input.component.css'],
 })
 export class FormInputComponent implements OnInit {
+
   children: Child[] = [];
-  child: Child = new Child();
+  child: Child = {} as Child;
   name = new FormControl('');
 
   constructor(
