@@ -15,7 +15,7 @@ export class ChildrenService {
     return this.http.get<Child>(`${this.childrenUrl}/${id}`);
   }
 
-  addChild(newChild: Child): Observable<any> {
+  add(newChild: Child): Observable<any> {
     return this.http.post(`${this.childrenUrl}`, newChild, this.httpOptions)
   }
 

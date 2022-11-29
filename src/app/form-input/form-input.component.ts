@@ -26,7 +26,7 @@ export class FormInputComponent implements OnInit {
   add(child: Child): void {
     if (this.child) {
     this.childrenService
-      .addChild(child)
+      .add(child)
       .subscribe((child: Child) => {
         this.children.push(child);
       });

@@ -19,10 +19,10 @@ export class ChildrenComponent implements OnInit {
       .subscribe((children) => (this.children = children));
   }
 
-  addChild(newChild: Child): void {
+  add(newChild: Child): void {
     this.childrenService
-      .addChild(newChild)
-      .subscribe((child) => this.children.push(child));
+      .add(newChild)
+      .subscribe((child: Child) => this.children.push(child));
   }
 
   deleteChild(): void {

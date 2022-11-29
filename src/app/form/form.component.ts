@@ -21,13 +21,13 @@ export class FormComponent implements OnInit {
     private location: Location
   ) {}
 
-  addChild(newChild: Child): void {
+  add(newChild: Child): void {
     this.childrenService
-      .addChild(newChild)
-      .subscribe((child) => this.children.push(child));
+      .add(newChild)
+      .subscribe((newChild: Child) => this.children.push(newChild));
   }
 
   ngOnInit(): void {
-    this.addChild(<Child>{});
+    this.add(<Child>{});
   }
 }
