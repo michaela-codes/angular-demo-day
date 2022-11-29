@@ -16,7 +16,7 @@ export class ChildrenService {
   }
 
   addChild(newChild: Child): Observable<any> {
-    return this.http.post(`${this.childrenUrl}/children`, newChild, this.httpOptions)
+    return this.http.post(`${this.childrenUrl}`, newChild, this.httpOptions)
   }
 
 
@@ -29,7 +29,7 @@ export class ChildrenService {
 
   constructor(private http: HttpClient) {}
 
-  private childrenUrl = '/api/v1/demoday';
+  private childrenUrl = '/api/v1/children';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
