@@ -25,10 +25,6 @@ export class ChildrenComponent implements OnInit {
       .subscribe((child: Child) => this.children.push(child));
   }
 
-  deleteChild(): void {
-    const id = String(this.route.snapshot.paramMap.get('id'));
-    this.childrenService.deleteChild(id).subscribe();
-  }
 
   constructor(
     private childrenService: ChildrenService,
@@ -38,6 +34,5 @@ export class ChildrenComponent implements OnInit {
 
   ngOnInit(): void {
     this.getChildren();
-    this.deleteChild();
   }
 }

@@ -7,13 +7,13 @@ import { ChildrenService } from '../children.service';
 @Component({
   selector: 'app-child-detail',
   templateUrl: './child-detail.component.html',
-  styleUrls: ['./child-detail.component.css']
+  styleUrls: ['./child-detail.component.css'],
 })
 export class ChildDetailComponent implements OnInit {
   @Input() child?: Child;
   //child: Child | undefined;
 
-  constructor (
+  constructor(
     private route: ActivatedRoute,
     private childrenService: ChildrenService,
     private location: Location
@@ -21,22 +21,27 @@ export class ChildDetailComponent implements OnInit {
 
   getChild(): void {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    this.childrenService.getChild(id)
-      .subscribe(child => this.child = child);
+    this.childrenService
+      .getChild(id)
+      .subscribe((child) => (this.child = child));
   }
 
   goBack(): void {
     this.location.back();
   }
 
+  deleteChild(): void {
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    this.childrenService.deleteChild(id).subscribe();
+  }
 
   //save(): void {
-    //if (this.child) {
-     // this.childrenService.updateChild(this.child)
-      // .subscribe(() => this.goBack())
+  //if (this.child) {
+  // this.childrenService.updateChild(this.child)
+  // .subscribe(() => this.goBack())
   //}}
 
   ngOnInit(): void {
-    this.getChild()
+    this.getChild();
   }
 }
