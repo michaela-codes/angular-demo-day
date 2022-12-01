@@ -1,6 +1,6 @@
 <div class="newChild">
 <a routerLink="/new-child" routerLinkActive="active-link">
-    <button>New Child</button>
+    <button class="new-child">New Child</button>
 </a>
 </div>
 <h2>My Children</h2>
@@ -8,8 +8,9 @@
 <ng-container>
     <li *ngFor="let child of children">
             <a routerLink="/detail/{{child.id}}" routerLinkActive="active-link">
-                <button>{{child.name}}</button>
+                <button class="child-name">{{child.name}}</button>
 </a>
+<button type="button" class="delete" (click)="deleteChild(child.id)">X</button>
 </li>
 </ng-container>
 

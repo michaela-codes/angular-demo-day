@@ -32,14 +32,14 @@ export class ChildDetailComponent implements OnInit {
 
   deleteChild(): void {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    this.childrenService.deleteChild(id).subscribe();
+    this.childrenService.deleteChild(id).subscribe(() => this.goBack());
   }
 
-  //save(): void {
-  //if (this.child) {
-  // this.childrenService.updateChild(this.child)
-  // .subscribe(() => this.goBack())
-  //}}
+  save(): void {
+    if (this.child) {
+      this.childrenService.updateChild(this.child)
+        .subscribe(() => this.goBack())
+  }}
 
   ngOnInit(): void {
     this.getChild();
