@@ -26,10 +26,10 @@ export class ChildrenComponent implements OnInit {
   }
 
   deleteChild(id: string): void {
-    this.childrenService.deleteChild(id).subscribe()//.subscribe(() => {
-      //this.children = this.children.filter((child) => {return child.id !== id});
-      //console.log('deleted')
-    //});
+    this.childrenService.deleteChild(id).subscribe(() => {
+      this.children = this.children.filter((child) => {return child.id !== id});
+      console.log('deleted')
+    });
   }
   constructor(
     private childrenService: ChildrenService,
