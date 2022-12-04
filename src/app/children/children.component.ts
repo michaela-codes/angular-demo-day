@@ -3,6 +3,7 @@ import { Child } from '../child'
 import { ChildrenService } from '../children.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-children',
@@ -34,7 +35,8 @@ export class ChildrenComponent implements OnInit {
   constructor(
     private childrenService: ChildrenService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {

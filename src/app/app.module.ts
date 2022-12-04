@@ -9,6 +9,7 @@ import { ChildDetailComponent } from './child-detail/child-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormInputComponent } from './form-input/form-input.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormInputComponent } from './form-input/form-input.component';
     FormComponent,
     ChildrenComponent,
     ChildDetailComponent,
-    FormInputComponent
+    FormInputComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

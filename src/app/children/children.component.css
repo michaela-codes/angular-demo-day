@@ -4,6 +4,7 @@
 h2 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 30px
 }
 
 ul {
@@ -45,7 +46,8 @@ button:hover {
 .new-child {
     display: block;
     text-align: center;
-    background-color: #407088;
+    background-color: black;
+    border-radius: 0;
 }
 
 .delete {
@@ -63,4 +65,5 @@ button:hover {
 p {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
 }
