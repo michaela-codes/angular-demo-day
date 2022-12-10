@@ -29,6 +29,7 @@ export class FormInputComponent implements OnInit {
       .add(child)
       .subscribe((child: Child) => {
         this.children.push(child);
+        this.goBack();
       });
   }}
 

@@ -5,7 +5,7 @@ h2 {
 button {
     display: block;
         margin: 20px auto;
-        border: 1px solid white;
+        border: 1px solid black;
         background: black;
         color: white;
         font-size: 16px;
@@ -14,6 +14,12 @@ button {
         transition: all 200ms ease;
         box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
         cursor: pointer;
+}
+
+button:hover {
+    background: white;
+        color:#407088;
+        border: 1px solid #407088;
 }
 
 div {
